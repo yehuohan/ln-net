@@ -8,12 +8,10 @@ Welcome to wl's documentation!
 
 Notes for wireless.
 
-:目录:
-
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    bluetooth
+    bt/bluetooth
 
 
 Indices and tables
