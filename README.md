@@ -1,4 +1,4 @@
 
-# wl
+# net
 
-Wireless
+Net

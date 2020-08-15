@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 # 项目信息
-project = 'ln-wl'
+project = 'ln-net'
 copyright = '2020, yehuohan@qq.com'
 author = 'yehuohan@qq.com'
 
