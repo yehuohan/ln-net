@@ -5,8 +5,7 @@ BlueTooth
 .. toctree::
     :maxdepth: 3
 
-    core-system-arch
-    data-transport-arch
+    architecture
     low-energy
 
 
