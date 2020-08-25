@@ -214,6 +214,44 @@ Isochronous Physical Channel PDU由一个16-bit的header和一个指定长度的
     :align: center
 
 
+空中接口协议（Air Interface Protocol）
+''''''''''''''''''''''''''''''''''''''
+
+Frame Space
+"""""""""""
+
+* Inter Frame Space(T_IFS)
+    一个channel上两包packet的时间间隔；
+* Minimum AUX Frame Space(T_MAFS)
+
+..  image:: img/mafs.png
+    :scale: 80 %
+    :align: center
+
+* Minimum Subevent Space(T_MSS)
+    两个event之间的时间间隔；
+
+..  image:: img/mss.png
+    :scale: 80 %
+    :align: center
+
+
+Non-Connected States
+""""""""""""""""""""
+
+* Standby state
+    - Advertising events
+* Advertising state
+* Scanning state
+* Initiating state
+
+Connection State
+""""""""""""""""""""
+
+* Connection events
+* Closing connection events
+
+
 BLE广播
 -------
 
@@ -230,4 +268,4 @@ BLE将37、38、39 RF Channel称为 `primary advertising channels` ，将0~36 RF
     主广播信道，用于传统广播和发起扩展广播；
 * `general purpose channels`
     次广播信道，用于AUX_ADV_IND和AUX_CHAIN_IND广播包；
-
+ 

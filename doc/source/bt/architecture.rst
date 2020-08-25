@@ -24,7 +24,7 @@
 核心系统架构（Core System Architecture）
 ----------------------------------------
 
-::
+..  code:: text
 
     +-----------------------+
     | Bluetooth Application |
@@ -53,7 +53,7 @@
 数据传输架构（Data Transport Architecture）
 -------------------------------------------
 
-::
+..  code:: text
 
     +----------+---------------------+
     | APP      | Profiles            |
@@ -88,7 +88,7 @@
 
 :Physical Transports:
 
-::
+..  code:: text
 
     The BR/EDR Physical Transport encapsulates the BR/EDR Physical Channels.
     Transfers using the BR/EDR Physical Transport use the BR/EDR Generic Packet Structure.
@@ -117,7 +117,7 @@ BR/EDR, AMP, LE的RF均使用2.4GHz~2.4835GHz的频率范围，且定义了各�
 
 :Physical Links(物理链路):
 
-::
+..  code:: text
 
     A physical link represents a baseband connection between Bluetooth devices.
     A physical link is always associated with exactly one physical channel

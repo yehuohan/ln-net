@@ -4,12 +4,12 @@
 
 [Nordic nRF](https://www.nordicsemi.com/Products)使用BLE协议相关。
 
-- nRF Command Line Tools: 包括JLink驱动、nrfjprog、mergehex等工具
 - nRF5 SDK: Nordic芯片SDK
+- nRF Command Line Tools: 包括JLink驱动、nrfjprog、mergehex等工具
 - nRF Toolbox: BLE应用工具
 - nRF Connect: BLE调试工具，有手机端和桌面版
 - nRFgo Studio: Flash烧写工具（可用PC版nRF Connect代替）
-- nRFutil: DFU工具，可通过pip安装（暂时不支持64位python，https://github.com/NordicSemiconductor/pc-nrfutil/issues/213）
+- nRFutil: DFU工具，可通过pip安装（暂时[不支持64位python](https://github.com/NordicSemiconductor/pc-nrfutil/issues/213)）
 - nRF Sniffer: 空中抓包工具，有硬件和软件两部分
 
 ## nRF5 SDK
@@ -54,3 +54,61 @@ SDK有一些experimental目录，是一些新特性或新实例代码，需要�
 
 ## Coding
 
+```
+    +------------------------------------------+
+    |                Application               |
+    +------------------------------------------+
+    | +-------------+ +------------------------+
+    | |             | |     SoftDevice API     |
+    | | Application | +-------------+----------+
+    | | Drivers     | | SoftDevice  | BLE      |
+    | |             | | Manager     | Protocol |
+    | |             | | Soc Library | Stack    |
+    | +-------------+ +------------------------+
+    +------------------------------------------+
+    |                  CMSIS                   |
+    +------------------------------------------+
+    |                 nRF5 SoC                 |
+    +------------------------------------------+
+```
+
+所有`SoftDevice API`都是以`sd_`开头，例如：
+
+- 与BLE协议栈有关的API： `sd_ble_gap_adv_start(…)`
+- 与外设相关的API：`sd_flash_write(…)`
+
+### LOG
+
+```
+// 使用RTT作为LOG后端
+#define NRF_LOG_BACKEND_RTT_ENABLED 1
+// 使用UART作为LOG后端
+#define NRF_LOG_BACKEND_UART_ENABLED 1
+// 初始化log
+log_init();
+// 打印log
+NRF_LOG_INFO("Demo started.\n");
+```
+
+### 广播
+
+- 初始化
+
+```
+ble_stack_init();   //初始化协议栈，PHY~L2CAP相关设置
+gap_params_init();  //配置GAP参数
+gatt_init();        //初始化GATT
+```
+
+### 扫描
+
+```
+ble_stack_init();   //初始化协议栈，PHY~L2CAP相关设置
+                    // ??? 为什么不用初始化GAP和GATT
+```
+
+
+**参考**
+
+- [nRF5 SDK软件架构及softdevice工作原理](https://www.cnblogs.com/iini/p/9332463.html)
+- [如何调试nRF5 SDK](https://www.cnblogs.com/iini/p/9279618.html)
