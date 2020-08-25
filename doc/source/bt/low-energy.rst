@@ -3,7 +3,7 @@
 蓝牙低功耗协议（Bluetooth Low Enery）
 =====================================
 
-..  image:: img/ble.gif
+..  image:: img/low-energy/ble.gif
     :scale: 80 %
     :align: center
 
@@ -48,7 +48,7 @@ States
 
 可以用状态机来描述Link Layer的操作。
 
-..  image:: img/ble-state.png
+..  image:: img/low-energy/ble-state.png
     :scale: 60 %
     :align: center
 
@@ -75,7 +75,7 @@ States
 
 根据状态的转换，有以下拓扑结构：
 
-..  image:: img/le-topology.png
+..  image:: img/low-energy/le-topology.png
     :scale: 80 %
     :align: center
 
@@ -111,7 +111,7 @@ LE Uncoded PHY Packet
 
 LE Uncoded PHY包括LE 1M和LE 2M两种PHY，数据包格式如下：
 
-..  image:: img/ll-le-uncoded-packet.png
+..  image:: img/low-energy/ll-le-uncoded-packet.png
     :scale: 80 %
     :align: center
 
@@ -124,7 +124,7 @@ LE Coded PHY Packet
 
 LE Coded PHY数据包格式如下：
 
-..  image:: img/ll-le-coded-packet.png
+..  image:: img/low-energy/ll-le-coded-packet.png
     :scale: 80 %
     :align: center
 
@@ -142,13 +142,13 @@ Advertising Physical Channel PDU
 
 Advertising Physical Channel PDU由一个16-bit的header和一个指定长度的payload组成：
 
-..  image:: img/apc-pdu.png
+..  image:: img/low-energy/apc-pdu.png
     :scale: 80 %
     :align: center
 
 其中header的各个字段如下：
 
-..  image:: img/apc-pdu-header.png
+..  image:: img/low-energy/apc-pdu-header.png
     :scale: 80 %
     :align: center
 
@@ -181,13 +181,13 @@ Data Physical Channel PDU
 
 Data Physical Channel PDU由一个16-bit或24-bit的header和一个指定长度的payload组成：
 
-..  image:: img/dpc-pdu.png
+..  image:: img/low-energy/dpc-pdu.png
     :scale: 80 %
     :align: center
 
 其中header的各个字段如下：
 
-..  image:: img/dpc-pdu-header.png
+..  image:: img/low-energy/dpc-pdu-header.png
     :scale: 80 %
     :align: center
 
@@ -203,13 +203,13 @@ Isochronous Physical Channel PDU
 
 Isochronous Physical Channel PDU由一个16-bit的header和一个指定长度的payload组成：
 
-..  image:: img/ipc-pdu.png
+..  image:: img/low-energy/ipc-pdu.png
     :scale: 80 %
     :align: center
 
 其中header的各个字段如下：
 
-..  image:: img/ipc-pdu-header.png
+..  image:: img/low-energy/ipc-pdu-header.png
     :scale: 80 %
     :align: center
 
@@ -224,14 +224,14 @@ Frame Space
     一个channel上两包packet的时间间隔；
 * Minimum AUX Frame Space(T_MAFS)
 
-..  image:: img/mafs.png
+..  image:: img/low-energy/mafs.png
     :scale: 80 %
     :align: center
 
 * Minimum Subevent Space(T_MSS)
     两个event之间的时间间隔；
 
-..  image:: img/mss.png
+..  image:: img/low-energy/mss.png
     :scale: 80 %
     :align: center
 

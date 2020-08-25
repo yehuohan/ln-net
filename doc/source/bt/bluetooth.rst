@@ -7,6 +7,7 @@ BlueTooth
 
     architecture
     low-energy
+    host
     nordic-nrf
 
 

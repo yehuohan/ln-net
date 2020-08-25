@@ -45,7 +45,7 @@
 * Core.Controller: 负责RF、Baseband等偏硬件的规范，抽象出逻辑链路（Logical Links）；
 * Core.Host: 在逻辑链路基础上封装；
 
-..  image:: img/core.png
+..  image:: img/architecture/core.png
     :scale: 80 %
     :align: center
 
@@ -78,7 +78,7 @@
 
 数据传输架构中的一些具体协议如下图所示：
 
-..  image:: img/data-detail.png
+..  image:: img/architecture/data-detail.png
     :scale: 80 %
     :align: center
 
@@ -166,7 +166,7 @@ Profiles
 说白了，profile是一个纵向协议，从PHY到L2CAP每层协议中都有点东西（不是站在L2CAP上就实现了profile所有功能）；
 虽说一个profile也可以被其它profile使用，但profile之间还是是各干各的为主（所以一个蓝牙产品也不需要实现所有的profile，只实现自己需要的即可）；
 
-..  image:: img/profiles.png
+..  image:: img/architecture/profiles.png
     :scale: 80 %
     :align: center
 
@@ -220,7 +220,7 @@ GATT中的角色，并不一定需要和GAP中的角色绑定，而是可以直�
 * Service由多个Characteristic组成
 * Characteristic包含一个Value和任意数量的Descriptor
 
-..  image:: img/gatt.png
+..  image:: img/architecture/gatt.png
     :scale: 80 %
     :align: center
 
