@@ -11,6 +11,7 @@ Notes for wireless.
 .. toctree::
     :maxdepth: 1
 
+    tcp-ip
     bt/bluetooth
 
 
